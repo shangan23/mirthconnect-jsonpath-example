@@ -26,21 +26,21 @@ var coreObj = new Packages.com.mirth.jsonpath.Core();
 ``` javascript
 var frameObj = new Packages.com.mirth.jsonpath.Frame();
 ```
-## Documentation on methods and it's usage
+## Documentation with Samples
 
-1.[Core Class - JSON Manipulation](#core-methods-for-json-manipulation)
+[Core Class - JSON Manipulation](#core-methods-for-json-manipulation)
 
-> [Read](#readstring-json-string-path-method)
+* [Read](#readstring-json-string-path-method)
 
-> [Insert](#insertstring-json-string-path-string-key-string-value-method)
+* [Insert](#insertstring-json-string-path-string-key-string-value-method)
 
-> [Update](#updatestring-json-string-key-string-value-method)
+* [Update](#updatestring-json-string-key-string-value-method)
 
-> [Delete](#deletestring-json-string-path-method)
+* [Delete](#deletestring-json-string-path-method)
 
-2.[Frame Class - Frame JSON](#frame-methods-for-json-framing)
+[Frame Class - Frame JSON](#frame-methods-for-json-framing)
 
-> [MakeJson](#makejsonstring-src-string-dest-string-map-method)
+* [MakeJson](#makejsonstring-src-string-dest-string-map-method)
 
 ### Core Methods for JSON manipulation
 #### <code>read(String json, String path)</code> method
