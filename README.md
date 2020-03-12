@@ -50,7 +50,7 @@ var result = coreObj.read(json, "$.details.name")
 ``` json
 John
 ```
-#### <code>insert(String json, String path, String key, Object value)</code> method
+#### <code>insert(String json, String path, String key, String value)</code> method
 ``` javascript
 coreObj.insert(json, path, key, value);
 ```
@@ -164,21 +164,16 @@ var result = coreObj.read(json, "$")
   "details": {
     "age": 31,
     "city": "New York"
-  },
-  "fullname": {
-    "fname": "Shankar",
-    "mname": "Ganesh",
-    "lname": "Jayaraman"
   }
 }
 ```
 
 ### Frame Methods for JSON framing
-#### <code>MakeJson(String src, String dest, String map)</code> method will create a Json according to the mapping provided in the <code>Map</code> Json
+#### <code>MakeJson(String src, String dest, String map)</code> method 
 ``` javascript
 frameObj.MakeJson(src, dest, map);
 ```
-### Sample Implementation
+##### Sample Implementation
 ``` javascript
 var obj = new Packages.com.mirth.jsonpath.Frame();
 var srcObj = {
@@ -209,7 +204,7 @@ var Map = JSON.stringify(mapObj);
 
 var result = frameObj.MakeJson(Src,Dest,Map);
 ```
-### Output of <code>result</code>
+##### Output of <code>result</code>
 ``` json
 {
   "module": "user",
