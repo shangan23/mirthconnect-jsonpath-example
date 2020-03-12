@@ -18,15 +18,20 @@ This repository helps you to implement JsonPath in Mirth Connect.
 #### MirthConnect Channels
 
 * Create your channel.
-* Add the below code to instantiate object.
-```java
-var obj = new Packages.com.mirth.jsonpath.Frame();
+* Add the below code to instantiate object to Frame Json for <code>Create/Update/Read and Listing</code> with your application
+``` javascript
+var frameObj = new Packages.com.mirth.jsonpath.Frame();
 ```
+* Add the below code to instantiate object to Core and Json for <code>Insert, Update and Delete Json</code>
+``` javascript
+var coreObj = new Packages.com.mirth.jsonpath.Core();
+```
+
 ## Documentation on methods and it's usage
 
-1. The <code>MakeJson(Src,Dest,Map)</code> method will create a Json according to the mapping provided in the <code>Map</code> Json
+### The <code>MakeJson(Src,Dest,Map)</code> method will create a Json according to the mapping provided in the <code>Map</code> Json
 ``` javascript
-obj.MakeJson(src, dest, map)
+frameObj.MakeJson(src, dest, map)
 ```
 ### Sample Implementation
 ``` javascript
@@ -57,7 +62,7 @@ var mapObj = {
 };
 var Map = JSON.stringify(mapObj);
 
-var result = obj.MakeJson(Src,Dest,Map);
+var result = frameObj.MakeJson(Src,Dest,Map);
 ```
 ### Output of <code>result</code>
 ``` json
