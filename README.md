@@ -3,31 +3,37 @@
 This repository helps you to implement JsonPath in Mirth Connect. 
 
 ## MirthConnect Server
-* Download the Jar mirth-json1.0.0.jar to MirthConnect server
+* Download the Jar mirth-jsonpath1.1.0.jar to MirthConnect server
 * Navigate to home folder of MirthConnect
 * Open custom-lib folder
-* Put the downloaded mirth-json1.0.0.jar inside custom-lib folder.
+* Put the downloaded mirth-jsonpath1.1.0.jar inside custom-lib folder.
 
 ## MirthConnect Administrator
 * Log in to your MirthConnect Administrator.
 * Click on Setting from the side window
 * From the main content navigate to Resources Tab.
 * Click on Reload resource from the side window.
-* Click Yes on the confirmation window to let MirthConnect know mirth-json1.0.0.jar is loaded.
+* Click Yes on the confirmation window to let MirthConnect know mirth-jsonpath1.1.0.jar is loaded.
 
 #### MirthConnect Channels
 
 * Create your channel.
-* Add the below code to instantiate object to Frame Json for <code>Create/Update/Read and Listing</code> with your application
-``` javascript
-var frameObj = new Packages.com.mirth.jsonpath.Frame();
-```
 * Add the below code to instantiate object to Core and Json for <code>Insert, Update and Delete Json</code>
 ``` javascript
 var coreObj = new Packages.com.mirth.jsonpath.Core();
 ```
-
+* Add the below code to instantiate object to Frame Json for <code>Create/Update/Read and Listing</code> with your application
+``` javascript
+var frameObj = new Packages.com.mirth.jsonpath.Frame();
+```
 ## Documentation on methods and it's usage
+
+### Core Methods for JSON manipulation
+#### insert method
+#### update method
+#### delete method
+
+
 
 ### The <code>MakeJson(Src,Dest,Map)</code> method will create a Json according to the mapping provided in the <code>Map</code> Json
 ``` javascript
