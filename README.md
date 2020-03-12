@@ -49,9 +49,11 @@ var destObj = {
 var Dest = JSON.stringify(destObj);
 
 var mapObj = {
+  "write": {
     "$.name": "$.details.name",
     "$.age": "$.details.age",
-    "$.city": "$.details.city",
+    "$.city": "$.details.city"
+  }
 };
 var Map = JSON.stringify(mapObj);
 
