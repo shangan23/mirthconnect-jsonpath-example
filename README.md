@@ -42,6 +42,8 @@ var frameObj = new Packages.com.mirth.jsonpath.Frame();
 
 * [MakeJson](#makejsonstring-src-string-dest-string-map-method)
 
+---
+
 ### Core Methods for JSON manipulation
 #### <code>read(String json, String path)</code> method
 ``` javascript
