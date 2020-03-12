@@ -48,13 +48,30 @@ var result = coreObj.read(json, "$.details.name")
 ```
 ### Output of <code>result</code>
 ``` json
-Shankar
+John
 ```
 #### <code>insert(String json, String path, String key, Object value)</code> method
 ``` javascript
 coreObj.insert(json, path, key, value);
 ```
 ##### Sample Implementation
+``` javascript
+var jsonObj = {
+  "module": "user",
+  "details": {
+    "name": "John",
+    "age": 31,
+    "city": "New York"
+  }
+};
+var json = JSON.stringify(jsonObj);
+coreObj.update(json, "$.details.name","Shankar")
+var result = coreObj.read(json, "$.details.name")
+```
+### Output of <code>result</code>
+``` json
+Shankar
+```
 
 #### <code>update(String json, String key, String value)</code> method
 ``` javascript
@@ -62,7 +79,21 @@ coreObj.update(json, key, value);
 ```
 ##### Sample Implementation
 ``` javascript
-var obj = new Packages.com.mirth.jsonpath.Frame();
+var jsonObj = {
+  "module": "user",
+  "details": {
+    "name": "John",
+    "age": 31,
+    "city": "New York"
+  }
+};
+var json = JSON.stringify(jsonObj);
+coreObj.update(json, "$.details.name","Shankar")
+var result = coreObj.read(json, "$.details.name")
+```
+### Output of <code>result</code>
+``` json
+Shankar
 ```
 #### <code>delete(String json, String path)</code> method
 ``` javascript
