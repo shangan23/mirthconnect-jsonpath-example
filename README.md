@@ -35,6 +35,7 @@ coreObj.read(json, path);
 ```
 ##### Sample Implementation
 ``` javascript
+var coreObj = new Packages.com.mirth.jsonpath.Core();
 var jsonObj = {
   "module": "user",
   "details": {
@@ -56,6 +57,7 @@ coreObj.insert(json, path, key, value);
 ```
 ##### Sample Implementation
 ``` javascript
+var coreObj = new Packages.com.mirth.jsonpath.Core();
 var jsonObj = {
   "module": "user",
   "details": {
@@ -85,6 +87,7 @@ coreObj.insertObject(json, path, key, value);
 ```
 ##### Sample Implementation
 ``` javascript
+var coreObj = new Packages.com.mirth.jsonpath.Core();
 var jsonObj = {
   "module": "user",
   "details": {
@@ -123,6 +126,7 @@ coreObj.update(json, key, value);
 ```
 ##### Sample Implementation
 ``` javascript
+var coreObj = new Packages.com.mirth.jsonpath.Core();
 var jsonObj = {
   "module": "user",
   "details": {
@@ -145,6 +149,7 @@ coreObj.delete(json, path);
 ```
 ##### Sample Implementation
 ``` javascript
+var coreObj = new Packages.com.mirth.jsonpath.Core();
 var jsonObj = {
   "module": "user",
   "details": {
