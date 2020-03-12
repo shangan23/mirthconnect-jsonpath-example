@@ -28,7 +28,7 @@ var obj = new Packages.com.mirth.jsonpath.Frame();
 ``` javascript
 obj.MakeJson(src, dest, map)
 ```
-### Sample Src, Dest & Map
+### Sample Implementation
 ``` javascript
 var obj = new Packages.com.mirth.jsonpath.Frame();
 var srcObj = {
