@@ -46,7 +46,7 @@ var jsonObj = {
 var json = JSON.stringify(jsonObj);
 var result = coreObj.read(json, "$.details.name")
 ```
-### Output of <code>result</code>
+##### Output of <code>result</code>
 ``` json
 John
 ```
@@ -64,15 +64,30 @@ var jsonObj = {
     "city": "New York"
   }
 };
+var obj = {};
+obj.fname = "Shankar";
+obj.mname = "Ganesh";
+obj.lname = "Jayaraman";
 var json = JSON.stringify(jsonObj);
-coreObj.update(json, "$.details.name","Shankar")
-var result = coreObj.read(json, "$.details.name")
+coreObj.insert(json, "$", "fullname", obj)
+var result = coreObj.read(json, "$")
 ```
-### Output of <code>result</code>
+##### Output of <code>result</code>
 ``` json
-Shankar
+{
+  "module": "user",
+  "details": {
+    "name": "John",
+    "age": 31,
+    "city": "New York"
+  },
+  "fullname": {
+    fname: "Shankar",
+    mname: "Ganesh",
+    lname: "Jayaraman"
+  }
+}
 ```
-
 #### <code>update(String json, String key, String value)</code> method
 ``` javascript
 coreObj.update(json, key, value);
@@ -91,7 +106,7 @@ var json = JSON.stringify(jsonObj);
 coreObj.update(json, "$.details.name","Shankar")
 var result = coreObj.read(json, "$.details.name")
 ```
-### Output of <code>result</code>
+#### Output of <code>result</code>
 ``` json
 Shankar
 ```
@@ -100,7 +115,34 @@ Shankar
 coreObj.delete(json, path);
 ```
 ##### Sample Implementation
-
+``` javascript
+var jsonObj = {
+  "module": "user",
+  "details": {
+    "name": "John",
+    "age": 31,
+    "city": "New York"
+  }
+};
+var json = JSON.stringify(jsonObj);
+coreObj.delete(json, "$.details.name")
+var result = coreObj.read(json, "$")
+```
+##### Output of <code>result</code>
+``` json
+{
+  "module": "user",
+  "details": {
+    "age": 31,
+    "city": "New York"
+  },
+  "fullname": {
+    fname: "Shankar",
+    mname: "Ganesh",
+    lname: "Jayaraman"
+  }
+}
+```
 
 ### Frame Methods for JSON framing
 #### <code>MakeJson(String src, String dest, String map)</code> method will create a Json according to the mapping provided in the <code>Map</code> Json
