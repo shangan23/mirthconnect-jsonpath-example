@@ -180,7 +180,7 @@ frameObj.MakeJson(src, dest, map);
 ```
 ##### Sample Implementation
 ``` javascript
-var obj = new Packages.com.mirth.jsonpath.Frame();
+var frameObj = new Packages.com.mirth.jsonpath.Frame();
 var srcObj = {
     name: "John",
     age: 31,
