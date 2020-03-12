@@ -64,12 +64,41 @@ var jsonObj = {
     "city": "New York"
   }
 };
+coreObj.insert(json, "$", "fullname", "Shankar Ganesh Jayaraman")
+var result = coreObj.read(json, "$")
+```
+##### Output of <code>result</code>
+``` json
+{
+  "module": "user",
+  "details": {
+    "name": "John",
+    "age": 31,
+    "city": "New York"
+  },
+  "fullname": "Shankar Ganesh Jayaraman"
+}
+```
+#### <code>insertObject(String json, String path, String key, Object value)</code> method
+``` javascript
+coreObj.insertObject(json, path, key, value);
+```
+##### Sample Implementation
+``` javascript
+var jsonObj = {
+  "module": "user",
+  "details": {
+    "name": "John",
+    "age": 31,
+    "city": "New York"
+  }
+};
 var obj = {};
 obj.fname = "Shankar";
 obj.mname = "Ganesh";
 obj.lname = "Jayaraman";
 var json = JSON.stringify(jsonObj);
-coreObj.insert(json, "$", "fullname", obj)
+coreObj.insertObject(json, "$", "fullname", obj)
 var result = coreObj.read(json, "$")
 ```
 ##### Output of <code>result</code>
