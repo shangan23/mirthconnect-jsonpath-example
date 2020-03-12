@@ -30,17 +30,17 @@ var frameObj = new Packages.com.mirth.jsonpath.Frame();
 
 1.[Core Class - JSON Manipulation](#core-methods-for-json-manipulation)
 
-> [Insert]()
+> [Read](#readstring-json-string-path-method)
 
-> [Update]()
+> [Insert](#insertstring-json-string-path-string-key-string-value-method)
 
-> [Delete]()
+> [Update](#updatestring-json-string-key-string-value-method)
 
-> [Read]()
+> [Delete](#deletestring-json-string-path-method)
 
-2.[Frame Class - Frame JSON](#)
+2.[Frame Class - Frame JSON](#frame-methods-for-json-framing)
 
-> [MakeJson]()
+> [MakeJson](#makejsonstring-src-string-dest-string-map-method)
 
 ### Core Methods for JSON manipulation
 #### <code>read(String json, String path)</code> method
