@@ -30,6 +30,7 @@ obj.MakeJson(src, dest, map)
 ```
 ### Sample Src, Dest & Map
 ``` javascript
+var obj = new Packages.com.mirth.jsonpath.Frame();
 var srcObj = {
     name: "John",
     age: 31,
@@ -54,7 +55,7 @@ var mapObj = {
 };
 var Map = JSON.stringify(mapObj);
 
-var result = MakeJson(Src,Dest,Map);
+var result = obj.MakeJson(Src,Dest,Map);
 ```
 ### Output of <code>result</code>
 ``` json
