@@ -183,7 +183,7 @@ frameObj.MakeJson(src, dest, map);
 var frameObj = new Packages.com.mirth.jsonpath.Frame();
 var srcObj = {
     name: "John",
-    age: 31,
+    age: "31",
     city: "New York"
 };
 var Src = JSON.stringify(srcObj);
@@ -192,7 +192,7 @@ var destObj = {
   "module": "user",
   "details": {
     "name": "",
-    "age": null,
+    "age": "",
     "city": ""
   }
 };
@@ -200,13 +200,12 @@ var Dest = JSON.stringify(destObj);
 
 var mapObj = {
   "write": {
-    "$.name": "$.details.name",
-    "$.age": "$.details.age",
-    "$.city": "$.details.city"
+    "$.details.name":"$.name",
+    "$.details.age":"$.age",
+    "$.details.city":"$.city" 
   }
 };
 var Map = JSON.stringify(mapObj);
-
 var result = frameObj.MakeJson(Src,Dest,Map);
 ```
 ##### Output of <code>result</code>
