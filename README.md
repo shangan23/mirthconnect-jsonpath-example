@@ -28,6 +28,9 @@ var frameObj = new Packages.com.mirth.jsonpath.Frame();
 ```
 ## Documentation on methods and it's usage
 
+* [Core Class - JSON Manipulation](#)
+* [Frame Class - Frame JSON](#)
+
 ### Core Methods for JSON manipulation
 #### <code>read(String json, String path)</code> method
 ``` javascript
