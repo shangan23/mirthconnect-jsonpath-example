@@ -1,4 +1,4 @@
-# Mirth Connect with JSON support
+# Mirth Connect with JSONPath support
 
 This repository helps you to implement JsonPath in Mirth Connect. 
 
@@ -28,4 +28,44 @@ var obj = new Packages.com.mirth.jsonpath.Frame();
 ``` javascript
 obj.MakeJson(src, dest, map)
 ```
+### Sample Src, Dest & Map
+``` javascript
+var srcObj = {
+    name: "John",
+    age: 31,
+    city: "New York"
+};
+var Src = JSON.stringify(srcObj);
+
+var destObj = {
+  "module": "user",
+  "details": {
+    "name": "",
+    "age": null,
+    "city": ""
+  }
+};
+var Dest = JSON.stringify(destObj);
+
+var mapObj = {
+    "$.name": "$.details.name",
+    "$.age": "$.details.age",
+    "$.city": "$.details.city",
+};
+var Map = JSON.stringify(mapObj);
+
+var result = MakeJson(Src,Dest,Map);
+```
+### Output of <code>result</code>
+``` json
+{
+  "module": "user",
+  "details": {
+    "name": "John",
+    "age": 31,
+    "city": "New York"
+  }
+}
+```
+
 :+1: :sparkles: :camel: :tada: :rocket: :metal: :octocat:  HAPPY CODING :+1: :sparkles: :camel: :tada: :rocket: :metal: :octocat: 
