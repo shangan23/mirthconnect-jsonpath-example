@@ -82,9 +82,9 @@ var result = coreObj.read(json, "$")
     "city": "New York"
   },
   "fullname": {
-    fname: "Shankar",
-    mname: "Ganesh",
-    lname: "Jayaraman"
+    "fname": "Shankar",
+    "mname": "Ganesh",
+    "lname": "Jayaraman"
   }
 }
 ```
@@ -137,9 +137,9 @@ var result = coreObj.read(json, "$")
     "city": "New York"
   },
   "fullname": {
-    fname: "Shankar",
-    mname: "Ganesh",
-    lname: "Jayaraman"
+    "fname": "Shankar",
+    "mname": "Ganesh",
+    "lname": "Jayaraman"
   }
 }
 ```
